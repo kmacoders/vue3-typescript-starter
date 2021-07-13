@@ -26,6 +26,7 @@ const hugCommonConfig = merge([
     chunkFilename: 'build/vendors-style.css'
   }),
   plugins.vueLoaderPlugin(),
+  plugins.buildFeatureFlags(),
   plugins.styleLint(),
   parts.aliasWebpack(),
   parts.statsCommon()

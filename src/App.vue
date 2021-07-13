@@ -1,15 +1,15 @@
 <template>
-  <h1>Ahihi</h1>
-  <hello msg="sfds"/>
+  <h1>TEst</h1>
+  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import Hello from 'Components/Hello.vue';
+import HelloWorld from './components/HelloWorld.vue';
 
 @Options({
   components: {
-    Hello,
+    HelloWorld,
   },
 })
 export default class App extends Vue {}

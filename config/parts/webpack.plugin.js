@@ -1,5 +1,6 @@
 const commonPath = require('../common-path');
 const path = require('path');
+const webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
@@ -43,6 +44,15 @@ exports.extractCss = (options) => ({
 
 exports.vueLoaderPlugin = () => ({
   plugins: [new VueLoaderPlugin()]
+})
+
+exports.buildFeatureFlags = () => ({
+  plugins: [
+    new webpack.DefinePlugin({
+      __VUE_OPTIONS_API__: 'true',
+      __VUE_PROD_DEVTOOLS__: 'false'
+    })
+  ]
 })
 
 exports.styleLint = () => ({
