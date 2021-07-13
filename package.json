@@ -59,7 +59,6 @@
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-svelte3": "^3.2.0",
     "html-webpack-plugin": "^4.5.2",
     "husky": "^4.3.8",
     "jest": "^26.6.3",
@@ -90,9 +89,8 @@
     "webpack-nano": "^1.1.1"
   },
   "dependencies": {
-    "svelte": "^3.38.2",
-    "svelte-check": "^1.5.4",
-    "svelte-loader": "^2.13.6",
-    "svelte-preprocess": "^4.7.3"
+    "core-js": "^3.6.5",
+    "vue": "^3.0.0",
+    "vue-class-component": "^8.0.0-0"
   }
 }
