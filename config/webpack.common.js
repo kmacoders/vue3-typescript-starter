@@ -6,7 +6,7 @@ const modules = require('./parts/webpack.module');
 const plugins = require('./parts/webpack.plugin');
 
 const hugCommonConfig = merge([
-  { name: 'Svelte TS Starter Kmacoders' },
+  { name: 'Vue3 Typescript Starter' },
   { entry: './src/index.ts' },
   {
     output: {
