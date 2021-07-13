@@ -1,0 +1,11 @@
+{
+    "presets": [
+        "@babel/preset-env"
+    ],
+    "plugins": [
+      ["@babel/proposal-decorators", { "legacy": true }],
+      ["@babel/proposal-class-properties", { "loose": true }],
+      ["@babel/plugin-proposal-private-methods", { "loose": true }],
+      ["@babel/transform-runtime", { "regenerator": true }]
+    ]
+}

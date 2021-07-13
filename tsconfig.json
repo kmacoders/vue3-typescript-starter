@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "outDir": "./dist",
+    "allowJs": true,
+    "target": "es5",
+    "strictPropertyInitialization": false,
+    "sourceMap": false,
+    "moduleResolution": "node",
+    "strict": true,
+    "noImplicitAny": false,
+    "experimentalDecorators": true,
+    /* Config alias for ts */
+    "baseUrl": ".",
+    "paths": {
+      "Components/*": [ "./src/components/*" ],
+      "Helpers/*": [ "./src/helpers/*" ],
+      "Styles/*": [ "./src/styles/*" ],
+      "Types/*": [ "./src/types/*" ],
+      "Stores/*": [ "./src/stores/*" ],
+    },
+  },
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts",
+    "**/*.test.ts"
+  ],
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.svelte",
+    "./jest.setup.ts"
+  ],
+}
