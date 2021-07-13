@@ -1,8 +1,4 @@
-import './styles/main.scss';
-import App from './App.svelte';
+import { createApp } from 'vue'
+import App from './App.vue'
 
-const app = new App({
-  target: document.getElementById('root'),
-});
-
-export default app;
+createApp(App).mount('#app')

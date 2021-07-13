@@ -4,6 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { VueLoaderPlugin } = require('vue-loader')
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 exports.cleanDist = () => ({
@@ -37,6 +38,10 @@ exports.extractCss = (options) => ({
       filename: options.filename,
     })
   ]
+})
+
+exports.vueLoaderPlugin = () => ({
+  plugins: [new VueLoaderPlugin()]
 })
 
 exports.styleLint = () => ({

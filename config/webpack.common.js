@@ -15,6 +15,7 @@ const hugCommonConfig = merge([
   modules.loadScss(),
   parts.commonOptimize(),
   plugins.extractCss({path: commonPath.outputPath, filename: 'build/main.css'}),
+  plugins.vueLoaderPlugin(),
   plugins.styleLint(),
   parts.aliasWebpack(),
   parts.statsCommon()

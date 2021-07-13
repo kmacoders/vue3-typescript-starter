@@ -1,4 +1,6 @@
-declare module '*.svelte' {
-  const value: any;
-  export default value;
+/* eslint-disable */
+declare module '*.vue' {
+  import type { DefineComponent } from 'vue'
+  const component: DefineComponent<{}, {}, any>
+  export default component
 }
