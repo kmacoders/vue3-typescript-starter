@@ -44,6 +44,7 @@ exports.prodOptimize = () => ({
 exports.aliasWebpack = () => ({
   resolve: {
     alias: {
+      vue: 'vue/dist/vue.esm-bundler.js',
       Components: commonPath.componentsPath,
       Helpers: commonPath.helpersPath,
       Styles: commonPath.stylesPath,

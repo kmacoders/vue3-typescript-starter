@@ -11,7 +11,7 @@ const hugCommonConfig = merge([
   { output: { path: commonPath.outputPath, filename: 'build/app.js' } },
   modules.loadBabel(),
   modules.loadTypescript(),
-  modules.loadSvelte(),
+  modules.loadVue(),
   modules.loadScss(),
   parts.commonOptimize(),
   plugins.extractCss({path: commonPath.outputPath, filename: 'build/main.css'}),

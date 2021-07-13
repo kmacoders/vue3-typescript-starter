@@ -23,7 +23,7 @@ exports.copyFromPublicToDist = () => ({
 exports.htmlWebpack = () => ({
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Svelte App KMACODERS',
+      title: 'Vue 3 Typescript',
       filename: 'index.html',
       template: path.resolve(__dirname, commonPath.publicPath, 'templates/index.ejs'),
     })

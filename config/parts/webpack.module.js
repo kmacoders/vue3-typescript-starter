@@ -1,8 +1,6 @@
 const commonPath = require('../common-path');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const sveltePreprocess = require("svelte-preprocess");
-
 
 exports.loadScss = () => ({
   module: {
@@ -72,26 +70,23 @@ exports.loadTypescript = () => ({
   }
 })
 
-exports.loadSvelte = () => ({
+exports.loadVue = () => ({
   module: {
     rules: [
       {
-        test: /\.(html|svelte)$/,
-        use: [
-          { loader: "babel-loader" },
-          {
-            loader: "svelte-loader",
-            options: {
-              emitCss: true,
-              preprocess: sveltePreprocess({})
-            },
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {
+          loaders: {
+            'scss': 'vue-style-loader!css-loader!sass-loader',
+            'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax',
           },
-        ],
-      }
+        },
+      },
     ]
   },
   resolve: {
-    extensions: ['.mjs', '.js', '.svelte', '.ts'],
-    mainFields: ['svelte', 'browser', 'module', 'main']
+    extensions: ['.vue', '.ts', '.js', '.json'],
+    mainFields: ['vue', 'browser', 'module', 'main']
   }
 })
