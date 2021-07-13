@@ -25,7 +25,6 @@
 
 ## How to code
 
-Check out the [Migration Guide](https://vitejs.dev/guide/migration.html) if you are upgrading from 1.x.
 
 ```
 npm run dev # development + hot reload
