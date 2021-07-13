@@ -1,5 +1,5 @@
 {
-  "name": "Svelte-TS-Starter-Kmacoders",
+  "name": "vue3-typescript-starter",
   "version": "1.0.0",
   "description": "Huwng",
   "main": "src/index.ts",
@@ -10,11 +10,11 @@
     "build:bundleanalyzer": "webpack --env  --mode production --analyze",
     "docs": "npx typedoc",
     "test": "jest --detectOpenHandles",
-    "lint": "eslint . --ext .svelte"
+    "lint": "eslint . --ext .vue"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kmacoders/Svelte-TS-Starter.git"
+    "url": "https://github.com/kmacoders/Vue3-Typescript-Starter.git"
   },
   "husky": {
     "hooks": {
@@ -29,9 +29,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kmacoders/Svelte-TS-Starter/issues"
+    "url": "https://github.com/kmacoders/Vue3-Typescript-Starter/issues"
   },
-  "homepage": "https://github.com/kmacoders/Svelte-TS-Starter",
+  "homepage": "https://github.com/kmacoders/Vue3-Typescript-Starter",
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
