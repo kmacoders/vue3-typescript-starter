@@ -79,9 +79,17 @@ Example :
 
 ```
 /*
-* Utils
+ * Utils
 */
 @import  './utils/utils-dir';
 ```
+### Docs
+ * [https://v3.vuejs.org/guide/typescript-support.html](https://v3.vuejs.org/guide/typescript-support.html)
+ * [https://webpack.js.org/](https://webpack.js.org/)
+ * [https://next.vuex.vuejs.org/](https://next.vuex.vuejs.org/)
+ * [https://class-component.vuejs.org/](https://class-component.vuejs.org/)
+ * [https://championswimmer.in/vuex-module-decorators/](https://championswimmer.in/vuex-module-decorators/)
+ * [https://jsdoc.app/](https://jsdoc.app/)
+ * ...
 
 ### ⚡️ Happy Coding !!! 
