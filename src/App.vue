@@ -1,12 +1,11 @@
 <template>
   <h1>Ahihi</h1>
-  <Hello msg="sfsdf" />
+  <hello msg="sfds"/>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
 import Hello from 'Components/Hello.vue';
-
 
 @Options({
   components: {

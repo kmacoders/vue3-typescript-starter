@@ -30,6 +30,16 @@ exports.statsDev = (options) => ({
 exports.commonOptimize = () => ({
   optimization: {
     minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
+    splitChunks: {
+      cacheGroups: {
+          vendor: {
+              test: /[\\/]node_modules[\\/]/,
+              name: 'vendors',
+              enforce: true,
+              chunks: 'all'
+          }
+      }
+    }
   }
 })
 

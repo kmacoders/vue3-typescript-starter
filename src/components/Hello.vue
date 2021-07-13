@@ -1,13 +1,16 @@
 <template>
-  <h1>Ahihi</h1>
+  <h1>{{msg}}</h1>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component';
+import { defineComponent } from "@vue/runtime-core";
 
-
-@Options({})
-export default class Hello extends Vue {}
+export default defineComponent({
+  name: 'Hello',
+  props: {
+    msg: String
+  }
+})
 </script>
 
 <style>

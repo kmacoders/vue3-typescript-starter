@@ -36,6 +36,7 @@ exports.extractCss = (options) => ({
     new MiniCssExtractPlugin({
       path: options.path,
       filename: options.filename,
+      chunkFilename: options.chunkFilename
     })
   ]
 })

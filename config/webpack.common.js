@@ -8,13 +8,23 @@ const plugins = require('./parts/webpack.plugin');
 const hugCommonConfig = merge([
   { name: 'Svelte TS Starter Kmacoders' },
   { entry: './src/index.ts' },
-  { output: { path: commonPath.outputPath, filename: 'build/app.js' } },
+  {
+    output: {
+      path: commonPath.outputPath,
+      filename: 'build/app.js',
+      chunkFilename: 'build/vendors-script.js'
+    }
+  },
   modules.loadBabel(),
   modules.loadTypescript(),
   modules.loadVue(),
   modules.loadScss(),
   parts.commonOptimize(),
-  plugins.extractCss({path: commonPath.outputPath, filename: 'build/main.css'}),
+  plugins.extractCss({
+    path: commonPath.outputPath,
+    filename: 'build/main.css',
+    chunkFilename: 'build/vendors-style.css'
+  }),
   plugins.vueLoaderPlugin(),
   plugins.styleLint(),
   parts.aliasWebpack(),
