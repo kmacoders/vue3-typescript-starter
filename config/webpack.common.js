@@ -20,5 +20,6 @@ const hugCommonConfig = merge([
   parts.aliasWebpack(),
   parts.statsCommon()
 ])
-
+// Todo
+hugCommonConfig.node = { fs: 'empty'}
 module.exports = hugCommonConfig

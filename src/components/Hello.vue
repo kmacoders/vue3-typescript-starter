@@ -1,19 +1,13 @@
 <template>
   <h1>Ahihi</h1>
-  <Hello msg="sfsdf" />
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import Hello from 'Components/Hello.vue';
 
 
-@Options({
-  components: {
-    Hello,
-  },
-})
-export default class App extends Vue {}
+@Options({})
+export default class Hello extends Vue {}
 </script>
 
 <style>

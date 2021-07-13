@@ -9,7 +9,6 @@
     "build:dev:bundleanalyzer": "webpack --mode development --analyze",
     "build:bundleanalyzer": "webpack --env  --mode production --analyze",
     "docs": "npx typedoc",
-    "test": "jest --detectOpenHandles",
     "lint": "eslint . --ext .vue"
   },
   "repository": {
@@ -41,8 +40,6 @@
     "@babel/preset-env": "^7.5.5",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
-    "@testing-library/jest-dom": "^5.11.9",
-    "@types/jest": "^26.0.20",
     "@typescript-eslint/eslint-plugin": "^4.14.1",
     "@typescript-eslint/parser": "^4.14.1",
     "@vue/compiler-sfc": "^3.1.2",
@@ -63,7 +60,6 @@
     "eslint-plugin-vue": "^7.12.1",
     "html-webpack-plugin": "^4.5.2",
     "husky": "^4.3.8",
-    "jest": "^26.6.3",
     "jsdoc": "^3.6.6",
     "mini-css-extract-plugin": "^0.9.0",
     "module-alias": "^2.2.2",
@@ -77,7 +73,6 @@
     "stylelint-config-standard": "^20.0.0",
     "stylelint-webpack-plugin": "^2.1.1",
     "terser-webpack-plugin": "^2.2.1",
-    "ts-jest": "^26.5.0",
     "ts-loader": "^7.0.5",
     "typedoc": "^0.20.32",
     "typescript": "^3.9.7",
