@@ -1,27 +1,28 @@
 module.exports = {
-  parser: "@typescript-eslint/parser",
+  parser: "vue-eslint-parser",
   plugins: [
-    "svelte3",
-    "@typescript-eslint", // Them Ts plugin
+    "@typescript-eslint",
+    // "eslint-comments",
+    // "promise",
+    // "unicorn",
   ],
   extends: [
     "airbnb-typescript/base",
     "plugin:@typescript-eslint/recommended",
     "plugin:eslint-comments/recommended",
+    'plugin:vue/vue3-recommended'
   ],
   parserOptions: {
+    parser: "@typescript-eslint/parser",
     project: './tsconfig.json',
-    extraFileExtensions: ['.svelte'],
+    extraFileExtensions: [".vue"]
   },
   overrides: [
     {
-      files: ['*.svelte'],
-      processor: 'svelte3/svelte3',
-      rules: {
-        'import/first': 0,
-        'import/no-duplicates': 0,
-        'import/no-mutable-exports': 0,
-        'import/no-unresolved': 0,
+      // enable the rule specifically for TypeScript files
+      "files": ["*.ts", "*.vue"],
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": ["error"]
       }
     }
   ],
@@ -45,13 +46,37 @@ module.exports = {
      * Cho phép ngắt dòng ( string dom )
      */
     "operator-linebreak": "off",
+
+    "import/prefer-default-export": "off",
+
+    /**
+     * For mutations VueX
+     *
+     * setCart(state, payload) {
+     * state.errorMessage = false;
+     * state.shoppingCart = payload;
+     * return state;
+  },
+     */
+    "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["state"] }],
+    "no-shadow": "off",
+    /**
+     * Ignore this vue lifecycle
+     */
+    "class-methods-use-this": [
+      "error",
+      { "exceptMethods": [
+        "beforeCreate",
+        "created",
+        "beforeMount",
+        "mounted",
+        "beforeUpdate",
+        "updated",
+        "beforeDestroy",
+        "destroyed"
+        ]
+      }
+    ],
     "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
   },
-  settings: {
-    /**
-     * Pass the TypeScript package to the Svelte plugin
-     * @see https://github.com/sveltejs/eslint-plugin-svelte3
-     */
-    'svelte3/typescript': () => require('typescript'),
-  }
 };
