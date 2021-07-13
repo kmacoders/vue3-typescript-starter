@@ -63,8 +63,8 @@ exports.loadTypescript = () => ({
         loader: 'ts-loader',
         exclude: /node_modules/,
         options: {
-          appendTsSuffixTo: [/\.svelte$/],
-        }
+          appendTsSuffixTo: [/\.vue$/],
+        },
       }
     ]
   }
