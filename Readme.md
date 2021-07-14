@@ -12,7 +12,7 @@
 - ⚡️ Eslint ( Support Vue 3 ), Stylelint,
 - ⚡️ CommitLint ( with Husky )
 - ⚡️ Babel
-- 📦 Support generate docs from JSDocs
+- 📦 Support generate docs from JSDocs ( only src/helpers || src/type modify in ./typedocs.json )
 - 📦 Support alias
 - 📦 Build with 7 in 1 SCSS folder pattern
 - 📦 Hot reload
