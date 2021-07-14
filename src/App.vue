@@ -1,21 +1,29 @@
 <template>
-  <h1>Huwng Dep Trai</h1>
-  <HelloWorldTwo msg="Hello" />
+  <AboutMe msg="Hello" />
+  <div>
+    From {{ school.name }}
+  </div>
   <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
 import HelloWorld from 'Components/HelloWorld.vue';
-import HelloWorldTwo from 'Components/HelloWorldTwo.vue'
+import AboutMe from 'Components/AboutMe.vue';
+import { ISchool } from 'Types/schools';
 
 @Options({
   components: {
     HelloWorld,
-    HelloWorldTwo
+    AboutMe,
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  school: ISchool = {
+    name: 'Academy of Cryptography Techniques',
+    location: 'Ha Noi, Viet Nam',
+  };
+}
 </script>
 
 <style>

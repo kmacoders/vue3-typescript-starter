@@ -30,6 +30,8 @@ module.exports = {
     "no-underscore-dangle": 'off',
     'max-len': 'off',
     'import/no-cycle': 'off',
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
 
     /**
      * Lỗi ngoại trừ :
@@ -41,12 +43,6 @@ module.exports = {
      */
     "no-unused-expressions": "off",
     "@typescript-eslint/no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }],
-
-    /**
-     * Cho phép ngắt dòng ( string dom )
-     */
-    "operator-linebreak": "off",
-
     "import/prefer-default-export": "off",
 
     /**
@@ -56,10 +52,11 @@ module.exports = {
      * state.errorMessage = false;
      * state.shoppingCart = payload;
      * return state;
-  },
+      },
      */
     "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["state"] }],
     "no-shadow": "off",
+
     /**
      * Ignore this vue lifecycle
      */

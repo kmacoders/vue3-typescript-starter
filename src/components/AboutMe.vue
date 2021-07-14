@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }} {{title}}</h1>
-    <h1>{{ rio.firstName }}</h1>
+    <div>Creator: {{ rio.firstName }}</div>
   </div>
 </template>
 
@@ -16,9 +16,9 @@ export default defineComponent({
   setup() {
     const title = ref('Vue3 Typescript');
     const rio: IPerson = reactive({
-      firstName: 'Hung',
+      firstName: 'Huwng',
       lastName: 'Phung',
-      age: 4,
+      age: 22,
     });
 
     return {
@@ -32,7 +32,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 .hello {
   h1 {
-    color: red;
+    color: #0091ea;
   }
 }
 </style>
