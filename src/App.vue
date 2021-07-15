@@ -8,9 +8,10 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import HelloWorld from 'Components/HelloWorld.vue';
-import AboutMe from 'Components/AboutMe.vue';
-import { ISchool } from 'Types/schools';
+import HelloWorld from '@/components/HelloWorld.vue';
+import AboutMe from '@/components/AboutMe.vue'
+
+import { ISchool } from '@/types/schools';
 
 @Options({
   components: {

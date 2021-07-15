@@ -1,8 +1,6 @@
 const commonPath = require('../common-path');
 const path = require('path');
 /** Dev */
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -54,12 +52,9 @@ exports.prodOptimize = () => ({
 exports.aliasWebpack = () => ({
   resolve: {
     alias: {
-      vue: '@vue/runtime-dom',
-      Components: commonPath.componentsPath,
-      Helpers: commonPath.helpersPath,
-      Styles: commonPath.stylesPath,
-      Types: commonPath.typesPath,
-      Stores: commonPath.storesPath
+      'vue': '@vue/runtime-dom',
+      '@': commonPath.srcPath,
+      '@@': commonPath.root
      }
   }
 })

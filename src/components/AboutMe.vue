@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import { defineComponent, reactive, ref } from 'vue';
-import { IPerson } from 'Types/index';
+import { IPerson } from '@/types/index';
 
 export default defineComponent({
   props: {

@@ -17,11 +17,8 @@
     /* Config alias for ts */
     "baseUrl": ".",
     "paths": {
-      "Components/*": [ "./src/components/*" ],
-      "Helpers/*": [ "./src/helpers/*" ],
-      "Styles/*": [ "./src/styles/*" ],
-      "Types/*": [ "./src/types/*" ],
-      "Stores/*": [ "./src/stores/*" ],
+      "@/*": ["src/*"],
+      "@@/*": ["./*"]
     },
   },
   "exclude": [
